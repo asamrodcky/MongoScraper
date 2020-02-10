@@ -7,9 +7,10 @@ $.getJSON("/articles", function (data) {
       <div class='card' data-id=`+data[i]._id+`>
         <div class='card-body'>
           <h4 class='card-title'>`+ data[i].title +`</h4>
-          <a class='card-text' href=`+ data[i].link +`>Read More</a>
+          <a href=`+ data[i].link +` target='_blank' class='btn btn-success'>Read More</a>
           <br/>
-          <a href='#' data-id=` + data[i]._id + ` class='btn btn-primary'>Leave a comment</a>
+          <br/>
+          <a href='#' data-id=` + data[i]._id + ` class='btn btn-primary' id='leaveAComment'>Leave a comment</a>
         </div>
       </div>`);
   }
@@ -17,7 +18,7 @@ $.getJSON("/articles", function (data) {
 
 
 // Whenever someone clicks a p tag
-$(document).on("click", "a", function () {
+$(document).on("click", "#leaveAComment", function () {
   $(".modal").modal("show");
   // Empty the notes from the note section
   $(".modal-body").empty();
@@ -64,7 +65,7 @@ $(document).on("click", "#savenote", function () {
     url: "/articles/" + thisId,
     data: {
       // Value taken from title input
-      title: $("#titleinput").val(),
+      title: $("#subjectinput").val(),
       // Value taken from note textarea
       body: $("#bodyinput").val()
     }
@@ -74,10 +75,10 @@ $(document).on("click", "#savenote", function () {
       // Log the response
       console.log(data);
       // Empty the notes section
-      $("#notes").empty();
+      $(".modal-body").empty();
     });
 
   // Also, remove the values entered in the input and textarea for note entry
-  $("#titleinput").val("");
+  $("#subjectinput").val("");
   $("#bodyinput").val("");
 });
