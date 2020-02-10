@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F6D0
+    background-color: black;
 }
 
 #wrapper {
@@ -7,6 +7,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-top: 5%;
+    text-align: center;
 }
 
 #articles {
@@ -25,7 +26,7 @@ textarea,
 input {
     display: block;
     width: 100%;
-    background-color: #FCF5C7;
+    background-color: white;
 }
 
 input {

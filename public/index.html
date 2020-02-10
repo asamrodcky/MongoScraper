@@ -16,12 +16,54 @@
 
 <body>
     <div id="wrapper">
-        <h1>Note Scraper</h1>
-        <h2><i>If you can do this...the homework should be no problem.</i></h2>
+        <div class="jumbotron">
+            <h1 class="display-4">News-Scraper</h1>
+            <h3 class="lead">This web app allows you to view and leave comments on your latest news articles
+                pertaining to fashion, art, music, and culture.</h3>
+            <hr class="my-4">
+            <p>Find an article that interests you and leave a comment.</p>
+        </div>
         <div id="articles"></div>
-        <div id="notes"></div>
+
+        <!-- MODAL -->
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title">Article Notes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <div class="current-notes"></div>
+                        <h6><strong>Add Note</strong></h6>
+                        <form action="" method="POST">
+                            Note Title: <br>
+                            <input type="text" name="firstname" size="30" id="note-title"> <br>
+                            Note Content: <br>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea> <br>
+                        </form> -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="savenote">Save note</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- jQuery JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
     <script src="app.js"></script>
 </body>
 
